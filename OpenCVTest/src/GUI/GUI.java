@@ -48,7 +48,7 @@ public class GUI extends JFrame {
 			}
 			};
 			ClickFastGame clickGame = new ClickFastGame(frame, panel);
-			ColorDetectGame colorGame = new ColorDetectGame(frame, panel);
+			//ColorDetectGame colorGame = new ColorDetectGame(frame, panel);
 			//PoseGame poseGame = new PoseGame(frame, panel);
 		panel.setSize(200, 200);
 		clickFastGameButton = new JButton("Reaction Click") {
@@ -62,7 +62,7 @@ public class GUI extends JFrame {
 				super.paintComponent(g);
 			}
 			};
-		colorDetectGameButton = new JButton("Color Depiction") {
+		/*colorDetectGameButton = new JButton("Color Depiction") {
 			@Override
 			protected void paintComponent(Graphics g) {
 				Graphics2D g2d = (Graphics2D) g;
@@ -72,7 +72,7 @@ public class GUI extends JFrame {
 				setContentAreaFilled(false);
 				super.paintComponent(g);
 			}
-			};
+			};*?
 		/*poseGameButton = new JButton("Pose for The Camera") {
 			@Override
 			protected void paintComponent(Graphics g) {
@@ -85,25 +85,25 @@ public class GUI extends JFrame {
 			}
 			};*/
 			clickFastGameButton.setBounds(25, 30, 50, 50);
-			colorDetectGameButton.setBounds((frame.getWidth()-getWidth())/2, 30, 50, 50);
+			//colorDetectGameButton.setBounds((frame.getWidth()-getWidth())/2, 30, 50, 50);
 		//	poseGameButton.setBounds(frame.getWidth()-getWidth()-25, 30, 200, 200);
 			
 		clickFastGameButton.setLocation(25, 30);
-		colorDetectGameButton.setLocation((frame.getWidth()-getWidth())/2, 30);
+		//colorDetectGameButton.setLocation((frame.getWidth()-getWidth())/2, 30);
 		frame.setSize(200, 200);
 		//poseGameButton.setLocation(frame.getWidth()-getWidth()-25, 30);
-			colorDetectGameButton.addActionListener(new ActionListener() { 
-				@Override
-				public void actionPerformed(ActionEvent e) 
-				{ 
-					
-					//colorGame.startGame();
-					//colorGame.init();
-					//colorGame.startCamera();
-					System.out.println("You have selected the camera game.");
-					panel.repaint();
-				}
-				});
+//			colorDetectGameButton.addActionListener(new ActionListener() { 
+//				@Override
+//				public void actionPerformed(ActionEvent e) 
+//				{ 
+//					
+//					colorGame.startGame();
+//					colorGame.init();
+//					colorGame.startCamera();
+//					System.out.println("You have selected the camera game.");
+//					panel.repaint();
+//				}
+//				});
 			/* poseGameButton.addActionListener(new ActionListener() { 
 				@Override
 				public void actionPerformed(ActionEvent e) 
@@ -147,8 +147,8 @@ public class GUI extends JFrame {
 		endButton.setForeground(Color.WHITE);
 		panel.add(clickFastGameButton);
 		panel.add(Box.createHorizontalStrut(1));
-		panel.add(colorDetectGameButton);
-		panel.add(Box.createHorizontalStrut(1));
+		//panel.add(colorDetectGameButton);
+		//panel.add(Box.createHorizontalStrut(1));
 		/*panel.add(poseGameButton);
 		panel.add(Box.createHorizontalStrut(1));*/
 		panel.add(endButton);

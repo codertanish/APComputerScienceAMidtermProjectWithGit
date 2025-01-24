@@ -40,6 +40,7 @@ public class ClickFastGame implements GameLogic {
 	private boolean gameStatus = false;
 	private JFrame frame;
 	private JPanel originalPanel;
+	private JButton endButton;
 	@Override
 	public void startGame() {
 		gameStatus = true;
@@ -55,6 +56,9 @@ public class ClickFastGame implements GameLogic {
 		frame.add(originalPanel);
 		frame.setSize(200, 200);
 		frame.setTitle("Selection GUI");
+		gamePanel.remove(button);
+		gamePanel.remove(endButton);
+		
 		frame.repaint();
 	}
 	class End extends TimerTask{
@@ -63,7 +67,7 @@ public class ClickFastGame implements GameLogic {
 			button.setText("Your final score: " + score);
 			button.setSize(200, 200);
 			button.setLocation(400, 400);
-			JButton endButton = new JButton("Return");
+			endButton = new JButton("Return");
 			endButton.setBounds(800, 800, 100, 100);
 			gamePanel.add(endButton);
 			endButton.addActionListener(new ActionListener() {
@@ -89,7 +93,7 @@ public void init() {
 	score = 0;
 	frame.remove(originalPanel);
 	frame.setTitle("Reaction Click");
-	frame.setSize(800, 800);
+	frame.setSize(1000, 1000);
 	frame.repaint();
 		
 			button = new JButton("Click Me!") {
@@ -105,7 +109,7 @@ public void init() {
 				};
 			gamePanel.setLayout(null);
 			
-			button.setBounds((int) (Math.random()*600+100), (int) (Math.random()*600+100), 100, 100);
+			button.setBounds((int) (Math.random()*800+100), (int) (Math.random()*800+100), 100, 100);
 			button.addActionListener(new ActionListener() { 
 				@Override
 				public void actionPerformed(ActionEvent e)  { 
